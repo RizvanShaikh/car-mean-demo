@@ -1,0 +1,50 @@
+{
+    "TRANSLATOR": {
+        "SELECT": "Select Your Language"
+    },
+    "MENU": {
+        "MASTER": "Master",
+        "DASHBOARD": "Dashboard",
+        "CONTENT": "Content",
+        "CMS": "CMS Management",
+        "CONTACT": "ContactUs Management",
+        "SITEUSER": "Site User",
+        "ADMIN": "Admin Management",
+        "PROFILE": "My Profile"
+    },
+    "ADMIN": {
+        "ADMINLIST": "Admin list",
+        "ADMINADD": "Add Admin",
+        "ADMINEDIT": "Edit Admin"
+    },
+   
+    "CONTACT": {
+        "CONTACTLIST": "ContactUs list",
+        "CONTACTADD": "Add ContactUs",
+        "CONTACTEDIT": "Edit ContactUs"
+    },
+    "CMS": {
+        "CMSLIST": "CMS list",
+        "CMSADD": "Add CMS",
+        "CMSEDIT": "Edit CMS"
+    },
+    "PROFILE": {
+        "UPDATEPROFILE": "Update Profile"
+    },
+    "BUTTONS": {
+        "ADDNEW": "Add New",
+        "SUBMIT": "Submit",
+        "CANCEL": "Cancel",
+        "DELETE": "Delete",
+        "UPDATE": "Update",
+        "EXIT": "Exit",
+        "UNLINK":"Unlink",
+        "BACK":"Back"
+
+    },
+    "POPMESSAGE": {
+        "STATUSUPDATE": "Are you sure want to update status ?",
+        "DELETE": "Are you sure want to delete ?",
+        "UNLINK": "Are you sure want to unlink ?"
+    }
+ }

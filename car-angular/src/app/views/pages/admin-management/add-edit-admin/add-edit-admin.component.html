@@ -1,0 +1,185 @@
+<div class="kt-portlet">
+    <div class="kt-portlet__head">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title" *ngIf="isAdd">{{'ADMIN.ADD' | translate }} </h3>
+            <h3 class="kt-portlet__head-title" *ngIf="!isAdd">{{'ADMIN.EDIT' | translate }}</h3>
+        </div>
+    </div>
+    <div class="kt-portlet__body">
+        <form class="kt-form kt-form__group" name="addEditAdminForm" [formGroup]="addEditAdminForm">
+            <div class="kt-portlet__body">
+
+                <!-- -----------control -->
+                <div class="form-group  row">
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                            {{'ADMIN.LABEL.FIRSTNAME' | translate }}
+                        </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="form-control m-input m-login__form-input--last" placeholder="{{'ADMIN.PLACEHOLDERS.FIRSTNAME' | translate}}"
+                            type="text" formControlName="user_firstName"
+                            [ngClass]="{ 'is-invalid': submitted && addEditAdminForm.controls.user_firstName.errors }">
+                        <div *ngIf="submitted && addEditAdminForm.controls.user_firstName.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditAdminForm.controls.user_firstName.errors?.required">
+                                {{'ADMIN.VALIDATION.FIRSTNAME_REQUIRED'  | translate }}</p>
+                            <p *ngIf="addEditAdminForm.controls.user_firstName.errors?.minlength && !addEditAdminForm.controls.user_firstName.errors?.pattern"
+                                class="lbl-err"> {{'ADMIN.VALIDATION.MIN_CHARACTER'  | translate }}</p>
+                            <p *ngIf="addEditAdminForm.controls.user_firstName.errors?.maxlength && !addEditAdminForm.controls.user_firstName.errors?.pattern"
+                                class="lbl-err">{{'ADMIN.VALIDATION.MAX_CHARACTER'  | translate }}</p>
+                            <p *ngIf="submitted && addEditAdminForm.controls.user_firstName.errors?.pattern">
+                                {{'ADMIN.VALIDATION.FIRSTNAMEINVALID'  | translate }} </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group  row">
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                            {{'ADMIN.LABEL.LASTNAME' | translate }}
+                        </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="form-control m-input m-login__form-input--last" placeholder="{{'ADMIN.PLACEHOLDERS.LASTNAME' | translate}}"
+                            type="text" formControlName="user_lastName"
+                            [ngClass]="{ 'is-invalid': submitted && addEditAdminForm.controls.user_lastName.errors }">
+                        <div *ngIf="submitted && addEditAdminForm.controls.user_lastName.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditAdminForm.controls.user_lastName.errors?.required">
+                                {{'ADMIN.VALIDATION.LASTNAME_REQUIRED'  | translate }}</p>
+                            <p *ngIf="addEditAdminForm.controls.user_lastName.errors?.minlength && !addEditAdminForm.controls.user_lastName.errors?.pattern"
+                                class="lbl-err"> {{'ADMIN.VALIDATION.MIN_CHARACTER'  | translate }}</p>
+                            <p *ngIf="addEditAdminForm.controls.user_lastName.errors?.maxlength && !addEditAdminForm.controls.user_lastName.errors?.pattern"
+                                class="lbl-err">{{'ADMIN.VALIDATION.MAX_CHARACTER'  | translate }}</p>
+                            <p *ngIf="submitted && addEditAdminForm.controls.user_lastName.errors?.pattern">
+                                {{'ADMIN.VALIDATION.LASTNAMEINVALID'  | translate }} </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -----------control -->
+                <div class="form-group  row">
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                           {{'ADMIN.LABEL.ROLE'  | translate }}*
+                        </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <select class="form-control m-input" id="country" formControlName="user_roleId"
+                            [ngClass]="{ 'is-invalid': submitted && addEditAdminForm.controls.user_roleId.errors }">
+                            <option value="">{{'ADMIN.PLACEHOLDERS.ROLE'  | translate }}</option>
+                            
+                            <option value="{{roleDetail._id}}" *ngFor = "let roleDetail of roles">{{roleDetail.role_name}}</option>
+                        </select>
+
+                        <div *ngIf="submitted && addEditAdminForm.controls.user_roleId.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditAdminForm.controls.user_roleId.errors?.required">
+                               {{'ADMIN.VALIDATION.ROLE_REQUIRED' | translate}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -----------control -->
+                <div class="form-group  row">
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                            {{'ADMIN.LABEL.EMAIL' | translate}}*
+                        </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="form-control m-input m-login__form-input--last" placeholder="{{'ADMIN.PLACEHOLDERS.EMAIL' | translate}}"
+                            formControlName="user_email" type="text"
+                            [ngClass]="{ 'is-invalid': submitted && addEditAdminForm.controls.user_email.errors }">
+                        <div *ngIf="submitted && addEditAdminForm.controls.user_email.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditAdminForm.controls.user_email.errors?.required">
+                                {{'ADMIN.VALIDATION.EMAIL_REQUIRED' | translate}}
+                            </p>
+                            <p *ngIf="submitted && addEditAdminForm.controls.user_email.errors?.pattern">
+                                {{'ADMIN.VALIDATION.EMAIL_INVALID' | translate}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -----------control -->
+                <div class="form-group  row">
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                            {{'ADMIN.LABEL.PHONE_NUMBER' | translate}}*
+                        </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="form-control m-input m-login__form-input--last" placeholder="{{'ADMIN.PLACEHOLDERS.PHONE_NUMBER' | translate}}"
+                            type="text" formControlName="user_phoneNumber"
+                            [ngClass]="{ 'is-invalid': submitted && addEditAdminForm.controls.user_phoneNumber.errors }">
+                        <div *ngIf="submitted && addEditAdminForm.controls.user_phoneNumber.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditAdminForm.controls.user_phoneNumber.errors?.required">
+                                {{'ADMIN.VALIDATION.PHONE_NUMBER_REQUIRED' | translate}}
+                            </p>
+                            <p *ngIf="submitted && addEditAdminForm.controls.user_phoneNumber.errors?.pattern">
+                                {{'ADMIN.VALIDATION.PHONE_NUMBER_INVALID' | translate}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group  row">
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                            {{'ADMIN.LABEL.PASSWORD' | translate}}*
+                        </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="form-control m-input m-login__form-input--last" type="password"
+                            placeholder="{{'ADMIN.PLACEHOLDERS.PASSWORD' | translate}}" formControlName="user_password"
+                            (keyup)="onkeyUp($event.target.value)"
+                            [ngClass]="{ 'is-invalid': submitted && addEditAdminForm.controls.user_password.errors }">
+                        <div *ngIf="submitted && addEditAdminForm.controls.user_password.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditAdminForm.controls.user_password.errors?.required">
+                                {{'ADMIN.VALIDATION.PASSWORD_REQUIRED' | translate}}
+                            </p>
+                            <p *ngIf="submitted && addEditAdminForm.controls.user_password.errors?.pattern">
+                                {{'ADMIN.VALIDATION.PASSWORD_INVALID' | translate}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div class="form-group  row">
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                            Profile Photo*
+                        </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="image_bx" style="position: relative; float: left;display: inline-grid;">
+                            <img [src]="url ? url : './../../assets/skv_images/upload_img.png'" class="up_img"
+                                width="72px" height="72px"> <br />
+                            <input type='file' (change)="onSelectFile($event)">
+                        </div>
+                    </div>
+                </div> -->
+
+
+                <div class="form-group  row">
+                    <div class="col-xl-3">
+                        <button type="button" routerLink="/admin/admin-management/list"
+                            class="btn btn-secondary btn-elevate btn-icon-sm">{{'BUTTONS.CANCEL' | translate }}</button>
+                    </div>
+                    <div class="col-xl-9">
+                        <button type="submit" (click)="onSubmit()"
+                            class="btn btn-brand btn-elevate btn-icon-sm bt-right"> {{'BUTTONS.SUBMIT' | translate }}
+                        </button>
+                    </div>
+                </div>
+                </div>
+            
+        </form>
+    </div>
+</div>

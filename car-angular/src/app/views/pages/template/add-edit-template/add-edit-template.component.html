@@ -1,0 +1,296 @@
+<div class="kt-portlet">
+    <div class="kt-portlet__head">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title" *ngIf="isAdd">{{'TEMPLATE.ADD' | translate }} </h3>
+            <h3 class="kt-portlet__head-title" *ngIf="!isAdd">{{'TEMPLATE.EDIT' | translate }}</h3>
+
+        </div>
+    </div>
+
+    <div class="kt-portlet__body">
+
+        <form class="kt-form kt-form__group" name="addEditTemplateForm" [formGroup]="addEditTemplateForm">
+            <div class="kt-portlet__body">
+                <!-- <div *ngIf="Editor">    
+                    <ckeditor  #editor [editor]="Editor"  class="form-control" type="text" placeholder="Enter Contant" formControlName="template_content_en"            [ngClass]="{ 'is-invalid': submitted && addEditTemplateForm.controls.template_content_en.errors }"></ckeditor></div> -->
+
+                <div class="form-group row">
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                            Type
+                           
+                        </label>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <select class="form-control m-input" id="type" formControlName="template_type"
+                            [ngClass]="{ 'is-invalid': submitted && addEditTemplateForm.controls.template_type.errors }"
+                            [(ngModel)]="selectedOption" name="first" (click)="print()">
+                            <option *ngFor="let option of options">
+                                {{option.name}}
+                              
+                            </option>
+                        </select>
+                        <div *ngIf="submitted && addEditTemplateForm.controls.template_type.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditTemplateForm.controls.template_type.errors?.required">
+                                {{'TEMPLATE.VALIDATION.FIELD_REQUIRED' | translate }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- -----------template_countryId -->
+                <div class="form-group  row">
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                            {{'TEMPLATE.LABEL.TEMPLATE_COUNTRY_NAME' | translate}}*
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="col-lg-3">
+                        <angular2-multiselect [data]="countries" [(ngModel)]="selectedItemsCountry"
+                            [settings]="dropdownSettingsCountry"
+                            (onSelect)="onItemCountrySelect($event, selectedItemsCountry.id)"
+                            (onDeSelect)="onItemCountryDeSelect($event, selectedItemsCountry.id)"
+                            (onSelectAll)="onCountrySelectAll($event)" (onDeSelectAll)="onCountryDeSelectAll($event)"
+                            formControlName="template_countryId" disabled>
+                        </angular2-multiselect>
+                     
+                        <div *ngIf="submitted && addEditTemplateForm.controls.template_countryId.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditTemplateForm.controls.template_countryId.errors?.required">
+                                {{'TEMPLATE.VALIDATION.FIELD_REQUIRED' | translate }}
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                            {{'TEMPLATE.LABEL.TEMPLATE_CITY_NAME' | translate}}*
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="col-lg-3">
+
+                        <angular2-multiselect [data]="countryCities" [(ngModel)]="selectedItemsCity" 
+                            [settings]="dropdownSettingsCity"
+                            (onSelect)="onItemCitySelect($event, selectedItemsCity.id)"
+                            (onDeSelect)="onItemCityDeSelect($event, selectedItemsCity.id)"
+                            (onSelectAll)="onCitySelectAll($event)" (onDeSelectAll)="onCityDeSelectAll($event)"
+                            formControlName="template_cityId" disabled>
+                        </angular2-multiselect>
+                        <!-- <div *ngIf="submitted && addEditTemplateForm.controls.template_cityId.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditTemplateForm.controls.template_cityId.errors?.required">
+                                {{'TEMPLATE.VALIDATION.FIELD_REQUIRED' | translate }}
+                            </p>
+                        </div> -->
+
+                    </div>
+                </div>
+                <!-- {{ order_type != '' ? 'TEMPLATE.LABEL.TEMPLATE_TITLE_EN'.replace('Template',order_type) : 'TEMPLATE.LABEL.TEMPLATE_TITLE_EN' | translate}}* -->
+                <!-- -----------control name en-->
+                <div class="form-group  row">
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label" [(ngModel)]="val">
+                            <!-- {{ selectedOption != '' ?  selectedOption : 'TEMPLATE.LABEL.TEMPLATE_TITLE_EN' }} -->
+                            {{val}}
+                            {{'TEMPLATE.LABEL.TEMPLATE_TITLE_EN' | translate}}*
+                        </label>
+                    </div>
+                    <!-- template_title_en -->
+                    <div class="col-lg-3">
+                        <input class="form-control m-input m-login__form-input--last"
+                            placeholder="{{'TEMPLATE.PLACEHOLDERS.TEMPLATE_TITLE' | translate}}" type="text"
+                            formControlName="template_title_en"
+                            [ngClass]="{ 'is-invalid': submitted && addEditTemplateForm.controls.template_title_en.errors }">
+                        <div *ngIf="submitted && addEditTemplateForm.controls.template_title_en.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditTemplateForm.controls.template_title_en.errors?.required">
+                                {{'TEMPLATE.VALIDATION.FIELD_REQUIRED' | translate }}
+                            </p>
+                            <p *ngIf="addEditTemplateForm.controls.template_title_en.errors?.minlength && !addEditTemplateForm.controls.template_title_en.errors?.pattern"
+                                class="lbl-err">
+                                {{'TEMPLATE.VALIDATION.MIN_CHARACTER' | translate }}
+                            </p>
+                            <p *ngIf="addEditTemplateForm.controls.template_title_en.errors?.maxlength && !addEditTemplateForm.controls.template_title_en.errors?.pattern"
+                                class="lbl-err">
+                                {{'TEMPLATE.VALIDATION.MAX_CHARACTER' | translate }}
+                            </p>
+                            <p *ngIf="submitted && addEditTemplateForm.controls.template_title_en.errors?.pattern">
+                                {{'TEMPLATE.VALIDATION.INVALID_TITLE' | translate }}
+                            </p>
+                        </div>
+                    </div>
+                    <!-- template_title_ar -->
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label" [(ngModel)]="val">
+                            {{val}}
+                            {{'TEMPLATE.LABEL.TEMPLATE_TITLE_AR' | translate}}*
+                        </label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input class="form-control m-input m-login__form-input--last"
+                            placeholder="{{'TEMPLATE.PLACEHOLDERS.TEMPLATE_TITLE' | translate}}" type="text"
+                            formControlName="template_title_ar"
+                            [ngClass]="{ 'is-invalid': submitted && addEditTemplateForm.controls.template_title_ar.errors }">
+                        <div *ngIf="submitted && addEditTemplateForm.controls.template_title_ar.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditTemplateForm.controls.template_title_ar.errors?.required">
+                                {{'TEMPLATE.VALIDATION.FIELD_REQUIRED' | translate }}
+                            </p>
+                            <p *ngIf="addEditTemplateForm.controls.template_title_ar.errors?.minlength && !addEditTemplateForm.controls.template_title_ar.errors?.pattern"
+                                class="lbl-err">
+                                {{'TEMPLATE.VALIDATION.MIN_CHARACTER' | translate }}
+                            </p>
+                            <p *ngIf="addEditTemplateForm.controls.template_title_ar.errors?.maxlength && !addEditTemplateForm.controls.template_title_ar.errors?.pattern"
+                                class="lbl-err">
+                                {{'TEMPLATE.VALIDATION.MAX_CHARACTER' | translate }}
+                            </p>
+                            <p *ngIf="submitted && addEditTemplateForm.controls.template_title_ar.errors?.pattern">
+                                {{'TEMPLATE.VALIDATION.INVALID_TITLE' | translate }}
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- ---------- template slug -->
+                <div class="form-group  row">
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                            {{'TEMPLATE.LABEL.TEMPLATE_SLUG' | translate}}*
+                        </label>
+                    </div>
+                    <!-- template slug -->
+                    <div class="col-lg-3">
+                        <input class="form-control m-input m-login__form-input--last"
+                            placeholder="{{'TEMPLATE.PLACEHOLDERS.TEMPLATE_SLUG' | translate}}" type="text"
+                            formControlName="template_slug"
+                            [ngClass]="{ 'is-invalid': submitted && addEditTemplateForm.controls.template_slug.errors }">
+                        <div *ngIf="submitted && addEditTemplateForm.controls.template_slug.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditTemplateForm.controls.template_slug.errors?.required">
+                                {{'TEMPLATE.VALIDATION.FIELD_REQUIRED' | translate }}
+                            </p>
+                            <p *ngIf="addEditTemplateForm.controls.template_slug.errors?.minlength && !addEditTemplateForm.controls.template_slug.errors?.pattern"
+                                class="lbl-err">
+                                {{'TEMPLATE.VALIDATION.MIN_CHARACTER' | translate }}
+                            </p>
+                            <p *ngIf="addEditTemplateForm.controls.template_slug.errors?.maxlength && !addEditTemplateForm.controls.template_slug.errors?.pattern"
+                                class="lbl-err">
+                                {{'TEMPLATE.VALIDATION.MAX_CHARACTER' | translate }}
+                            </p>
+                            <p *ngIf="submitted && addEditTemplateForm.controls.template_slug.errors?.pattern">
+                                {{'TEMPLATE.VALIDATION.INVALID_TITLE' | translate }}
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                            {{'TEMPLATE.LABEL.TEMPLATE_CODE' | translate}}*
+                        </label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input class="form-control m-input m-login__form-input--last"
+                            placeholder="{{'TEMPLATE.PLACEHOLDERS.TEMPLATE_CODE' | translate}}" type="text"
+                            formControlName="template_code"
+                            [ngClass]="{ 'is-invalid': submitted && addEditTemplateForm.controls.template_code.errors }">
+                        <div *ngIf="submitted && addEditTemplateForm.controls.template_code.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p *ngIf="submitted && addEditTemplateForm.controls.template_code.errors?.required">
+                                {{'TEMPLATE.VALIDATION.FIELD_REQUIRED' | translate }}
+                            </p>
+                            <p *ngIf="addEditTemplateForm.controls.template_code.errors?.minlength && !addEditTemplateForm.controls.template_code.errors?.pattern"
+                                class="lbl-err">
+                                {{'TEMPLATE.VALIDATION.MIN_CHARACTER' | translate }}
+                            </p>
+                            <p *ngIf="addEditTemplateForm.controls.template_code.errors?.maxlength && !addEditTemplateForm.controls.template_code.errors?.pattern"
+                                class="lbl-err">
+                                {{'TEMPLATE.VALIDATION.MAX_CHARACTER' | translate }}
+                            </p>
+                            <p *ngIf="submitted && addEditTemplateForm.controls.template_code.errors?.pattern">
+                                {{'TEMPLATE.VALIDATION.INVALID_TITLE' | translate }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -----------template Specific -->
+                <div class="form-group  row">
+                    <div class="col-lg-3">
+                        <label for="example-text-input" class="col-form-label">
+                            {{'TEMPLATE.LABEL.TEMPLATE_COUNTRY_SPECIFIC' | translate}}*
+                        </label>
+                    </div>
+                    <!-- template_isCountrySpecific -->
+                    <div class="col-lg-3">
+                        <select class="form-control m-input" id="specific" formControlName="template_isCountrySpecific"
+                            [ngClass]="{ 'is-invalid': submitted && addEditTemplateForm.controls.template_isCountrySpecific.errors }">
+                            <option value="">Select country specific</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <div *ngIf="submitted && addEditTemplateForm.controls.template_isCountrySpecific.errors"
+                            class="form-control-feedback" style="color: red">
+                            <p
+                                *ngIf="submitted && addEditTemplateForm.controls.template_isCountrySpecific.errors?.required">
+                                {{'TEMPLATE.VALIDATION.FIELD_REQUIRED' | translate }}
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!----- CK Editor en --->
+                <div class="form-group row">
+                    <div class="col-md-12 col-lg-12">
+                        <label class="col-form-label" [(ngModel)]="val">
+                            {{val}}
+                            {{'TEMPLATE.LABEL.TEMPLATE_CONTENT_EN' | translate}}*
+                        </label>
+                    </div>
+                    <div class="col-md-12 col-lg-12" *ngIf="Editor">
+                        <ckeditor #editor [editor]="Editor" class="form-control ht-auto" type="text"
+                            placeholder="Enter Contant" formControlName="template_content_en"
+                            [ngClass]="{ 'is-invalid': submitted && addEditTemplateForm.controls.template_content_en.errors }">
+                        </ckeditor>
+                    </div>
+
+                </div>
+
+                <!----- CK Editor ar --->
+                <div class="form-group  row">
+                    <div class="col-md-12  col-lg-12">
+                        <label for="example-text-input" class="col-form-label" [(ngModel)]="val">
+                            {{val}}
+                            {{'TEMPLATE.LABEL.TEMPLATE_CONTENT_AR' | translate}}*
+                        </label>
+                    </div>
+
+                    <div class=" col-md-12 col-lg-12" *ngIf="Editor">
+                        <ckeditor #editor [editor]="Editor" class="form-control ht-auto" type="text"
+                            placeholder="Enter Contant" formControlName="template_content_ar"
+                            [ngClass]="{ 'is-invalid': submitted && addEditTemplateForm.controls.template_content_ar.errors }">
+                        </ckeditor>
+                    </div>
+                </div>
+
+                <div class="form-group  row">
+                    <div class="col-xl-3">
+                        <button type="button" routerLink="/admin/templacities"
+                            class="btn btn-secondary btn-elevate btn-icon-sm">{{'BUTTONS.CANCEL' | translate }}</button>
+                    </div>
+                    <div class="col-xl-9">
+                        <button type="submit" (click)="onSubmit()" onSubmit
+                            class="btn btn-brand btn-elevate btn-icon-sm bt-right"> {{'BUTTONS.SUBMIT' | translate }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

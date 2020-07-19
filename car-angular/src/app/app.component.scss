@@ -1,0 +1,129 @@
+:host {
+	height: 100%;
+	margin: 0;
+}
+
+// .slr_loader_bx {
+// 	position: fixed;
+// 	background: #999; //$color_green_hover
+// 	display: flex;
+// 	top: 0;
+// 	left: 0;
+// 	height: 100vh;
+// 	width: 100%;
+// 	justify-content: center;
+// 	align-items: center;
+// 	z-index: 999;
+// 	display: none;
+// 	opacity: 0.8;
+	
+// 	.slr_inr_box {
+// 	display: inline-block;
+// 	width: 130px;
+// 	height: 110px;
+// 	font-size:24px;
+// 	position: relative;
+// 	vertical-align: middle;
+// 	color:#ffffff;
+// 	text-align: center;
+	
+// 	.slr_loader {
+// 	font-size: 70px;
+// 	line-height: 110px;
+// 	text-align: center;
+// 	display: inline-block;
+// 	width: 1.5em;
+// 	height: 1.5em;
+// 	color: inherit;
+// 	vertical-align: middle;
+// 	pointer-events: none;
+// 	position: relative;
+// 	border-radius: 50%;
+// 	box-shadow: 0 0 1em 0 currentcolor, inset 0 0 1em 0 currentcolor;
+// 	-webkit-animation: 1s loader linear infinite;
+// 	animation: 1s loader linear infinite;
+	
+// 	&:before,
+// 	&:after {
+// 	content: '';
+// 	display: block;
+// 	width: inherit;
+// 	height: inherit;
+// 	position: absolute;
+// 	border-radius: 50%;
+// 	}
+	
+// 	&:before {
+// 	border-top: .2em solid currentcolor;
+// 	border-right: .2em solid transparent;
+// 	top: .28em;
+// 	right: calc(50% - .22em);
+// 	}
+	
+// 	 &:after {
+// 	border-bottom: .2em solid currentcolor;
+// 	border-left: .2em solid transparent;
+// 	bottom: .28em;
+// 	left: calc(50% - .22em);
+// 	}
+// 	 }
+// 	 }
+// 	}
+	
+// 	.slr_loading .slr_loader_bx {
+// 	display: flex;
+// 	}
+
+
+.kt-blockui{
+	background: #fff;
+    -webkit-box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .1);
+	box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .1);
+	border-radius: 4px;
+    display: table;
+    table-layout: fixed;
+}
+.kt-blockui>span {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 8px 15px;
+	font-size: 1rem;
+	font-weight: 400;
+}
+	.kt-blockui>span {
+		color: #6f727d;
+
+}
+.kt-loader {
+    position: relative;
+}
+.kt-blockui>span>.kt-loader, .kt-blockui>span>.m-spinner {
+    margin-right: 10px;
+}
+// .kt-loader:before {
+//     content: '';
+//     -webkit-box-sizing: border-box;
+//     box-sizing: border-box;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     border-top: 2px solid #07d;
+//     border-right: 2px solid transparent;
+//     border-radius: 50%;
+//     -webkit-animation: kt-loader-rotate .6s linear infinite;
+//     animation: kt-loader-rotate .6s linear infinite;
+// }
+.kt-loader:before {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-top: -.7rem;
+    margin-left: -.7rem;
+    border-top-width: 2px;
+    border-right-width: 2px;
+}
+.kt-loader:before {
+    border-top-color: #dfe2ea;
+}
+.kt-loader.kt-loader--brand:before {
+    border-top-color: #09aaf8;
+}
