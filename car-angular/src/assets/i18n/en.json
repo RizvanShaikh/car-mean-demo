@@ -1,0 +1,505 @@
+{
+    "TRANSLATOR": {
+        "SELECT": "Select Your Language"
+    },
+    "MENU": {
+        "MASTER": "Master",
+        "DASHBOARD": "Dashboard",
+        "CONTENT": "Content",
+        "CMS": "CMS Management",
+        "CONTACT": "ContactUs Management",
+        "COUNTRY": "Country Management",
+        "CITY": "City Management",
+        "SITEUSER": "Site User",
+        "ADMIN": "Admin Management",
+        "SERVICE_TYPE":"Service Type Management",
+        "PROFILE": "My Profile",
+        "TEMPLATE": "Template Management",
+        "ROLES": "Role Management",
+        "OPERATOR": "Operator Management"
+    },
+    "ADMIN": {
+        "LIST": "Admin list",
+        "ADD": "Add Admin User",
+        "EDIT": "Edit Admin User",
+        "MESSAGES":{
+            "INSERTED":"Admin save successfully",
+            "PROCESSING":"Admin lists keeps processing...",
+            "UPDATED":"Admin user updated successfully",
+            "DELETED": "Admin user deleted successfully"
+        },
+        "LABEL":{
+            "FIRSTNAME":"First Name",
+            "LASTNAME":"Last Name",
+            "EMAIL":"Email",
+            "PASSWORD":"Password",
+            "ROLE":"Role",
+            "SR_NO":"Sr. No.",
+            "STATUS":"Status",
+            "CREATED_ON":"Created On",
+            "ACTIONS":"Actions",
+            "ACTIVE":"Active",
+            "INACTIVE":"Inactive",
+            "PHONE_NUMBER":"Phone Number",
+            "FULLNAME":"Full Name"
+        },
+        "VALIDATION": {
+            "FIRSTNAME_REQUIRED": "Please enter firstname.",
+            "FIRSTNAME_INVALID":  "Please enter valid firstname" ,
+            "LASTNAME_REQUIRED": "Please enter lastname.",
+            "LASTNAME_INVALID":  "Please enter valid lastname" ,
+            "ROLE_REQUIRED":"Please select role.",
+            "EMAIL_REQUIRED": "Please enter email name.",
+            "EMAIL_INVALID": "Please enter valid email.",
+            "PASSWORD_REQUIRED": "Please enter password.",
+            "PASSWORD_INVALID": "Please enter valid password.",
+            "CONFPASSWORD_REQUIRED": "Please enter confirm password.",
+            "CONFPASSWORD_INVALID": "Please enter valid confirm password.",
+            "MIN_CHARACTER": "Minimum 2 characters long.", 
+            "MAX_CHARACTER":  "Maximum 64 characters long."
+        },
+        "PLACEHOLDERS":{
+            "FIRSTNAME":"Enter firstname",
+            "LASTNAME":"Enter lastname",
+            "FULLNAME":"Enter fullname",
+            "EMAIL":"Enter email",
+            "PHONE_NUMBER":"Enter phone number",
+            "ROLE":"Select role",
+            "PASSWORD":"Enter password",
+            "STATUS":"Select status"
+        },
+        "BUTTONS": {
+            "SEARCH": "Search",
+            "RESET": "Reset"
+        }
+    },
+    "CONTACT": {
+        "TITLE":"Contact Us",
+        "CONTACTLIST": "ContactUs list",
+        "CONTACTADD": "Add ContactUs",
+        "CONTACTEDIT": "Edit ContactUs"
+    },
+    "CMS": {
+        "MODULE_NAME": "CMS Management",
+        "TITLE":"CMS Management",
+        "LIST": "CMS list",
+        "ADD": "Add CMS",
+        "EDIT": "Edit CMS",
+        "LABEL": {
+            "CMS_TITLE": "CMS Title",
+            "CMS_TITLE_EN": "CMS Title (English)",
+            "CMS_TITLE_AR": "CMS Title (Arabic)",
+            "CMS_CONTENT_EN": "CMS Content (English)",
+            "CMS_CONTENT_AR": "CMS Content (Arabic)",
+            "CMS_TYPE": "Type",
+            "SR_NO": "Sr. No.",
+            "STATUS": "Status",
+            "CREATED_ON": "Created On",
+            "ACTIONS": "Actions",
+            "ACTIVE": "Active",
+            "INACTIVE": "Inactive"
+        },
+        "BUTTONS": {
+            "SEARCH": "Search",
+            "RESET": "Reset"
+        },
+        "MESSAGES": {
+            "INSERTED": "CMS save successfully",
+            "UPDATED": "CMS updated successfully",
+            "DELETED": "CMS deleted successfully",
+            "PROCESSING":"CMS list keeps processing..."
+        },
+        "PLACEHOLDERS": {
+            "CMS_TITLE": "Enter title",
+            "CMS_CONTENT": "Enter content",
+            "STATUS": "Select Status"
+        },
+        "VALIDATION": {
+            "FIELD_REQUIRED": "This field is required.", 
+            "MIN_CHARACTER": "Minimum 2 characters long.", 
+            "MAX_CHARACTER":  "Maximum 64 characters long." , 
+            "INVALID_TITLE":  "Title is invalid." ,
+            "INVALID_PHONE": "Phone number is invalid."
+        }
+    },
+
+    "PROFILE": {
+        "UPDATEPROFILE": "Update Profile"
+    },
+    "BUTTONS": {
+        "ADDNEW": "Add New",
+        "SUBMIT": "Submit",
+        "CANCEL": "Cancel",
+        "DELETE": "Delete",
+        "UPDATE": "Update",
+        "EXIT": "Exit",
+        "UNLINK": "Unlink",
+        "BACK": "Back"
+    },
+    "POPMESSAGE": {
+        "STATUSUPDATE": "Are you sure want to update status ?",
+        "DELETE": "Are you sure want to delete ?",
+        "UNLINK": "Are you sure want to unlink ?"
+    },
+    "AUTH": {
+        "LABEL": {
+            "EMAIL": "Email",
+            "PASSWORD": "Password",
+            "CONFPASSWORD": "Confirm Password",
+            "RESET_PASSWORD": "Reset Password"
+        },
+        "VALIDATION": {
+            "EMAIL_REQUIRED": "Please enter email.",
+            "EMAIL_INVALID": "Please enter valid email.",
+            "PASSWORD_REQUIRED": "Please enter password.",
+            "PASSWORD_INVALID": "Please enter valid password.",
+            "CONFPASSWORD_REQUIRED": "Please enter confirm password.",
+            "CONFPASSWORD_INVALID": "Please enter valid confirm password."
+        },
+        "BUTTONS": {
+            "LOGIN": "LOGIN",
+            "FORGOT_BUTTON": "*Forgot Passowrd?",
+            "RESET_PASSWORD": "Reset my Password"
+        }
+    },
+    "ROLES": {
+        "MODULE_NAME": "Role Management",
+        "LIST": "Roles list",
+        "ADD": "Add Role",
+        "EDIT": "Edit Role",
+        "MESSAGES":{
+            "INSERTED":"Role save successfully",
+            "PROCESSING":"Role list keeps processing...",
+            "UPDATED":"Role updated successfully",
+            "DELETED": "Role deleted successfully"
+        },
+        "LABEL":{
+            "ROLE_NAME":"Role Name",
+            "ROLE_SLUG":"Slug",
+            "PERMISSIONS":"Permissions",
+            "SR_NO":"Sr. No.",
+            "STATUS":"Status",
+            "CREATED_ON":"Created On",
+            "ACTIONS":"Actions",
+            "ACTIVE":"Active",
+            "INACTIVE":"Inactive"
+        },
+        "VALIDATION": {
+            "EMAIL_REQUIRED": "Please enter email.",
+            "EMAIL_INVALID": "Please enter valid email.",
+            "PASSWORD_REQUIRED": "Please enter password.",
+            "PASSWORD_INVALID": "Please enter valid password.",
+            "CONFPASSWORD_REQUIRED": "Please enter confirm password.",
+            "CONFPASSWORD_INVALID": "Please enter valid confirm password."
+        },
+        "PLACEHOLDERS":{
+            "ROLE_NAME":"Enter role name",
+            "ROLE_SLUG":"Enter slug",
+            "STATUS":"Select Status"
+        },
+        "BUTTONS": {
+            "SEARCH": "Search",
+            "RESET": "Reset"
+        }
+    },
+    "COUNTRY": {
+        "MODULE_NAME": "Country Management",
+        "LIST": "Country List",
+        "ADD": "Add Country",
+        "EDIT": "Edit Country",
+        "LABEL": {
+            "COUNTRY_NAME":"Country Name",
+            "COUNTRY_NAME_EN": "Country Name (English)",
+            "COUNTRY_NAME_AR": "Country Name (Arabic)",
+            "COUNTRY_CODE": "Country Code",
+            "COUNTRY_CURRENCY": "Country Currency",
+            "COUNTRY_ISD_EN": "Country ISD (English)",
+            "COUNTRY_ISD_AR": "Country ISD (Arabic)",
+            "COUNTRY_ISO_EN": "Country ISO (English)",
+            "COUNTRY_ISO_AR": "Country ISO (Arabic)",
+            "COUNTRY_PHONEFORMAT": "Phone Format",
+            "COUNTRY_PHONEHINT": "Phone Hint",
+            "COUNTRY_LATITUDE": "Lat",
+            "COUNTRY_LONGITUDE": "Long",
+            "COUNTRY_RIDERAPI": "Rider Direction API Limit",
+            "COUNTRY_DRIVERAPI": "Driver Direction API Limit",
+            "SR_NO": "Sr. No.",
+            "STATUS": "Status",
+            "CREATED_ON": "Created On",
+            "ACTIONS": "Actions",
+            "ACTIVE": "Active",
+            "INACTIVE": "Inactive"
+        },
+        "BUTTONS": {
+            "SEARCH": "Search",
+            "RESET": "Reset"
+           
+        },
+        "MESSAGES": {
+            "INSERTED": "Country save successfully",
+            "UPDATED": "Country updated successfully",
+            "DELETED": "Country deleted successfully",
+            "PROCESSING":"Country listing keeps processing"
+        },
+        "PLACEHOLDERS": {
+            "COUNTRY_NAME": "Enter country name",
+            "COUNTRY_CODE": "Enter country code",
+            "COUNTRY_CURRENCY": "Enter country currency",
+            "COUNTRY_ISD": "Enter country isd code",
+            "COUNTRY_ISO": "Enter country iso code",
+            "COUNTRY_PHONEFORMAT": "Enter phone number",
+            "COUNTRY_PHONEHINT": "Enter phone hint",
+            "COUNTRY_LATITUDE": "Enter latitude",
+            "COUNTRY_LONGITUDE": "Enter longitude",
+            "COUNTRY_RIDERAPI": "Enter rider API limit",
+            "COUNTRY_DRIVERAPI": "Enter driver API limit ",
+            "STATUS": "Select Status"
+        },
+        "VALIDATION": {
+            "FIELD_REQUIRED": "This field is required.", 
+            "MIN_CHARACTER": "Minimum 2 characters long.", 
+            "MAX_CHARACTER":  "Maximum 64 characters long." , 
+            "INVALID_TITLE":  "Title is invalid." ,
+            "INVALID_PHONE": "Phone Number is invalid."
+        }
+    
+    },
+
+    "PROVIDER": {
+        "MODULE_NAME": "Povider Management",
+        "LIST": "Provider List",
+        "ADD": "Add Provider",
+        "EDIT": "Edit Provider",
+        "LABEL": {
+            "USER_NAME": "Provider Name",
+            "FIRST_NAME": "First Name",
+            "LAST_NAME": "Last Name",
+            "EMAIL":  "Email",
+            "PHONE_NUMBER": "Phone Number",
+            "PASSWORD": "Password",
+            "CONFIRM_PASSWORD": "Confirm Password",
+            "ACCOUNT_TYPE": "Account Type",
+            "SR_NO": "Sr. No.",
+            "STATUS": "Status",
+            "CREATED_ON": "Created On",
+            "ACTIONS": "Actions",
+            "ACTIVE": "Active",
+            "INACTIVE": "Inactive"
+        },
+        "BUTTONS": {
+            "SEARCH": "Search",
+            "RESET": "Reset"
+        },
+        "MESSAGES": {
+            "INSERTED": "Provider save successfully",
+            "UPDATED": "Provider updated successfully",
+            "DELETED": "Provider deleted successfully",
+            "PROCESSING":"Provider listing keeps processing"
+        },
+        "PLACEHOLDERS": {
+            "PROVIDER_NAME": "Provider name",
+            "FIRST_NAME": "First name",
+            "LAST_NAME": "Last name",
+            "EMAIL": "Email",
+            "PASSWORD": "Password",
+            "PHONE_NUMBER": "Mobile number",
+            "CONFIRM_PASSWORD": "Confirm password",
+             "ACCOUNT_TYPE": "Account type",  
+            "STATUS":"Select Status"
+        },
+        "VALIDATION": {
+            "FIELD_REQUIRED": "This field is required.", 
+            "MIN_CHARACTER": "Minimum 2 characters long.", 
+            "MAX_CHARACTER":  "Maximum 64 characters long." , 
+            "INVALID_TITLE":  "Title is invalid." ,
+            "INVALID_PHONE": "Phone number is invalid."
+        }
+    },
+
+    "BUYER": {
+        "MODULE_NAME": "Buyer Management",
+        "LIST": "Buyer List",
+        "ADD": "Add Buyer",
+        "EDIT": "Edit Buyer",
+        "LABEL": {
+            "USER_NAME": "Buyer Name",
+            "FIRST_NAME": "First Name",
+            "LAST_NAME": "Last Name",
+            "EMAIL":  "Email",
+            "PHONE_NUMBER": "Phone Number",
+            "PASSWORD": "Password",
+            "CONFIRM_PASSWORD": "Confirm Password",
+            "ACCOUNT_TYPE": "Account Type",
+            "SR_NO": "Sr. No.",
+            "STATUS": "Status",
+            "CREATED_ON": "Created On",
+            "ACTIONS": "Actions",
+            "ACTIVE": "Active",
+            "INACTIVE": "Inactive"
+        },
+        "BUTTONS": {
+            "SEARCH": "Search",
+            "RESET": "Reset"
+        },
+        "MESSAGES": {
+            "INSERTED": "Buyer save successfully",
+            "UPDATED": "Buyer updated successfully",
+            "DELETED": "Buyer deleted successfully",
+            "PROCESSING":"Buyer listing keeps processing"
+        },
+        "PLACEHOLDERS": {
+            "BUYER_NAME": "Buyer name",
+             "FIRST_NAME": "First name",
+             "LAST_NAME": "Last name",
+             "EMAIL": "Email",
+             "PASSWORD": "Password",
+             "PHONE_NUMBER": "Mobile number",
+             "CONFIRM_PASSWORD": "Confirm password",
+              "ACCOUNT_TYPE": "Account type",  
+            "STATUS":"Select Status"
+        },
+        "VALIDATION": {
+            "FIELD_REQUIRED": "This field is required.", 
+            "MIN_CHARACTER": "Minimum 2 characters long.", 
+            "MAX_CHARACTER":  "Maximum 64 characters long." , 
+            "INVALID_TITLE":  "Title is invalid." ,
+            "INVALID_PHONE": "Phone number is invalid."
+        }
+    },
+
+    "CITY": {
+        "MODULE_NAME": "City Management",
+        "LIST": "City List",
+        "ADD": "Add City",
+        "EDIT": "Edit City",
+        "LABEL": {
+            "CITY_NAME_EN": "City Name (English)",
+            "CITY_NAME_AR": "City Name (Arabic)",
+            "CITY_NAME": "City Name",
+            "CITY_CODE": "City Code",
+            "CITY_COUNTRYID": "City Country id",
+            "CITY_COUNTRY_NAME": "Country Name",
+            "SR_NO": "Sr. No.",
+            "STATUS": "Status",
+            "CREATED_ON": "Created On",
+            "ACTIONS": "Actions",
+            "ACTIVE": "Active",
+            "INACTIVE": "Inactive"
+        },
+        "BUTTONS": {
+            "SEARCH": "Search",
+            "RESET": "Reset"
+        },
+        "MESSAGES": {
+            "INSERTED": "City save successfully",
+            "UPDATED": "City updated successfully",
+            "DELETED": "City deleted successfully",
+            "PROCESSING":"City listing keeps processing"
+        },
+       
+        "PLACEHOLDERS": {
+            "CITY_NAME": "Enter city name",
+            "CITY_CODE": "Enter city code",
+            "CITY_COUNTRYID": "Enter city country id",
+            "CITY_COUNTRY_NAME": "Enter country name",
+            "STATUS": "Select Status"
+        },
+        "VALIDATION": {
+            "FIELD_REQUIRED": "This field is required.", 
+            "MIN_CHARACTER": "Minimum 2 characters long.", 
+            "MAX_CHARACTER":  "Maximum 64 characters long." , 
+            "INVALID_TITLE":  "Title is invalid." ,
+            "INVALID_PHONE": "Phone number is invalid."
+        }
+    },
+    "TEMPLATE": {
+        "MODULE_NAME": "Template Management",
+        "LIST": "Template List",
+        "ADD": "Add Template",
+        "EDIT": "Edit Template",
+        "LABEL": {
+            "TEMPLATE_TITLE_EN": "Template Title (English)",
+            "TEMPLATE_TITLE_AR": "Template Title (Arabic)",
+            "TEMPLATE_TITLE": "Template Title",
+            "TEMPLATE_SLUG": "Template Slug",
+            "TEMPLATE_CONTENT_EN": "Content (English)",
+            "TEMPLATE_CONTENT_AR": "Content (Arabic)",
+            "TEMPLATE_CODE": "Template Code",
+            "TEMPLATE_COUNTRY_SPECIFIC": "Country specific",
+            "TEMPLATE_TYPE": "Type",
+            "TEMPLATE_COUNTRY_NAME": "Country Name",
+            "TEMPLATE_CITY_NAME": "City Name",
+            "SR_NO": "Sr. No.",
+            "STATUS": "Status",
+            "CREATED_ON": "Created On",
+            "ACTIONS": "Actions",
+            "ACTIVE": "Active",
+            "INACTIVE": "Inactive"
+        },
+        "BUTTONS": {
+            "SEARCH": "Search",
+            "RESET": "Reset"
+        },
+        "MESSAGES": {
+            "INSERTED": "Template save successfully",
+            "UPDATED": "Template updated successfully",
+            "DELETED": "Template deleted successfully",
+            "PROCESSING":"Template lists keeps processing..."
+        },
+        "PLACEHOLDERS": {
+            "TEMPLATE_TITLE": "Enter template title",
+            "TEMPLATE_CONTENT": "Enter template content",
+            "TEMPLATE_CODE": "Enter template code",
+            "TEMPLATE_SLUG": "Enter template slug",
+            "STATUS": "Select Status",
+            "TEMPLATE_SELECTCOUNTRY": "Select Country",
+            "TEMPLATE_SELECTCITY": "Select City"
+        },
+        "VALIDATION": {
+            "FIELD_REQUIRED": "This field is required.", 
+            "MIN_CHARACTER": "Minimum 2 characters long.", 
+            "MAX_CHARACTER":  "Maximum 64 characters long." , 
+            "INVALID_TITLE":  "Title is invalid." ,
+            "INVALID_PHONE": "Phone number is invalid."
+        }
+    },
+    "OPERATOR": {
+        "MODULE_NAME": "Operator Management",
+        "LIST": "Operator List",
+        "ADD": "Add Operator Type",
+        "EDIT": "Edit Operator Type",
+        "LABEL": {
+            "OPERATOR_NAME": "Operator Name",
+            "SR_NO": "Sr. No.",
+            "STATUS": "Status",
+            "CREATED_ON": "Created On",
+            "ACTIONS": "Actions",
+            "ACTIVE": "Active",
+            "INACTIVE": "Inactive"
+        },
+        "BUTTONS": {
+            "SEARCH": "Search",
+            "RESET": "Reset"
+        },
+        "MESSAGES": {
+            "INSERTED": "Operator type save successfully",
+            "UPDATED": "Operator type updated successfully",
+            "DELETED": "Operator type deleted successfully",
+            "PROCESSING":"Operator types listing keeps processing"
+        },
+        "PLACEHOLDERS": {
+            "STATUS":"Select Status"
+        },
+        "VALIDATION": {
+            "FIELD_REQUIRED": "This field is required.", 
+            "MIN_CHARACTER": "Minimum 2 characters long.", 
+            "MAX_CHARACTER":  "Maximum 64 characters long." , 
+            "INVALID_TITLE":  "Title is invalid." ,
+            "INVALID_PHONE": "Phone number is invalid."
+        }
+    },
+    "DASHBOARD":{
+        "TITLE":"Dashboard"
+    }
+  
+}

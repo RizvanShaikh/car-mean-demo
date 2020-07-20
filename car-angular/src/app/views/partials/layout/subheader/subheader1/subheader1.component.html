@@ -1,0 +1,23 @@
+<!-- begin:: Content Head -->
+<div class="kt-subheader kt-grid__item" [ngClass]="{'kt-container--clear': clear}"  id="kt_subheader">
+	<div class="kt-container" [ngClass]="{'kt-container--fluid': fluid}">
+		<div class="kt-subheader__main">
+			<h3 *ngIf="title && title == 'Dashboard'" class="kt-subheader__title">{{'MENU.DASHBOARD' | translate }}</h3>
+			<h3 *ngIf="title&& title == 'Admin Management'" class="kt-subheader__title">{{'MENU.ADMIN' | translate }}</h3>
+			<h3 *ngIf="title&& title == 'CMS Management'" class="kt-subheader__title">{{'MENU.CMS' | translate }}</h3>
+			<h3 *ngIf="title&& title == 'Contact Management'" class="kt-subheader__title">{{'MENU.CONTACT' | translate }}</h3>
+			<h3 *ngIf="title&& title == 'Contact Management'" class="kt-subheader__title">{{'MENU.BUYER' | translate }}</h3>
+			<h3 *ngIf="title&& title == 'Contact Management'" class="kt-subheader__title">{{'MENU.PROVIDER' | translate }}</h3>
+			<!--<h4 *ngIf="desc" class="kt-subheader__desc">{{desc}}</h4>-->
+			<!-- <h4 class="kt-subheader__desc">#XRS-45670</h4>
+			<a href="javascript:;" class="btn btn-label-warning btn-bold btn-sm btn-icon-h kt-margin-l-10">
+				Add New
+			</a> -->
+		</div>
+		<div class="kt-subheader__toolbar">
+			<div class="kt-subheader__wrapper">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end:: Content Head -->
